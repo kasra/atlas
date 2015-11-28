@@ -1,0 +1,19 @@
+-------------------------------------------
+Atlas: Synthetic SLAM Benchmark
+-------------------------------------------
+Kasra Khosoussi - https://kasra.github.io
+Centre for Autonomous Systems (CAS)
+University of Technology Sydney
+-------------------------------------------
+
+- All datasets are generated using g2o's simulator (https://github.com/RainerKuemmerle/g2o)
+- All datasets are in g2o format
+- There are five noise levels (n1,n2,...,n5), and 100 datasets per each noise level
+- Noise model for nk (k=1,...,5): Normal(0,.01*k*Identity)
+- Each dataset has 10,000 poses
+- Naming convention:
+	   *-p10000-normal.g2o   := Gauss-Newton converges to MLE within 50 iterations
+	   *-p10000.g2o          := Gauss-Newton fails to converge whitin 50 iterations
+	   *-p10000-localmin.g2o := Gauss-Newton converges to a local minimum whitin 50 iterations
+- More details are available in http://www.roboticsproceedings.org/rss11/p23.pdf
+
